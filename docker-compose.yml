@@ -1,0 +1,28 @@
+version: '29.5.3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80" # Truy cập web qua cổng 8080 để không trùng với cổng 80 của XAMPP
+    volumes:
+      - ./www:/var/www/html # Ánh xạ thư mục code vào container
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0 # XAMPP thường dùng MariaDB, bạn có thể thay bằng mariadb:10.11 nếu muốn
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password        # Đặt pass root cho MySQL
+      MYSQL_DATABASE: qly_dat_phong      # Nhập tên DB giống hệt trên XAMPP
+      MYSQL_USER: myuser                        # User DB
+      MYSQL_PASSWORD: mypassword                # Pass DB
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # Tự động import file SQL khi chạy lần đầu
+    ports:
+      - "3307:3306" # Chạy DB ở cổng 3307 để không trùng với cổng 3306 của XAMPP
+
+volumes:
+  db_data: # Lưu trữ data của database để không bị mất khi tắt container

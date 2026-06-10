@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách đăng ký phòng họp - Khoa CNTT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="Logo Khoa CNTT" />
+        <h1  class="title">Hệ thống Quản lý Đặt phòng </h1>
+    </header>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="text-center">Đăng nhập</h3>
+                </div>
+                <div class="card-body">
+                    <form action="login.php" method="POST">
+                        <div class="form-group">
+                            <label for="username">Tên đăng nhập</label>
+                            <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" name="password" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Ghi nhớ đăng nhập
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                    </form>
+                    
+                    <div class="text-center mt-3">
+                        <p>Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+            <h5>Khoa Công nghệ thông tin - Trường Kỹ thuật và Công nghệ - Đại học Trà Vinh © 2026</h5>
+            <h6>School of Information Technology, College of Engineering and Technology - Tra Vinh University © 2026</h6>
+            <div class="decorator-line"></div>
+            <ul class="contact-info">
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Số 126, Nguyễn Thiện Thành, Khóm 4, Phường Hòa Thuận, Tỉnh Vĩnh Long
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    (+84) 294.3855246 (Ext: 135 - 203)
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:khoacntt@tvu.edu.vn">khoacntt@tvu.edu.vn</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-link"></i>
+                    <a href="https://fit.tvu.edu.vn" target="_blank">https://fit.tvu.edu.vn</a>
+                </li>
+            </ul>
+
+            <div class="tvu-logo">
+                <img src="images/7.jpg" alt="Tra Vinh University Logo" class="logo-snippet">
+            </div>
+            <hr class="footer-hr">
+        </div>
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+   </footer>
+
+</body>
+</html>
