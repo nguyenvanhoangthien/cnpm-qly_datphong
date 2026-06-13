@@ -96,6 +96,7 @@ $is_admin = (isset($_SESSION['role']) && $_SESSION['role'] == 'admin');
         }
         ?>
         
+        <div class="table-responsive">
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
@@ -188,6 +189,7 @@ $is_admin = (isset($_SESSION['role']) && $_SESSION['role'] == 'admin');
                 ?>
             </tbody>
         </table>
+        </div>
     </div>
     
     <!-- Phần footer -->

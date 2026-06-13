@@ -42,6 +42,7 @@ $is_admin = (isset($_SESSION['role']) && $_SESSION['role'] == 'admin');
         <?php if ($is_admin): ?>
             <a href="datphong.html" class="btn btn-success">Thêm Phòng Mới</a>
         <?php endif; ?>
+        <div class="table-responsive">
         <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -83,6 +84,7 @@ $is_admin = (isset($_SESSION['role']) && $_SESSION['role'] == 'admin');
         ?>
          </tbody>
   </table>
+  </div>
     </div>
     <footer class="site-footer">
             <div class="footer-container">

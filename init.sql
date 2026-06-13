@@ -45,10 +45,14 @@ CREATE TABLE IF NOT EXISTS dangky (
 INSERT INTO users (username, password, email, fullname, role) VALUES
 ('admin', MD5('admin123'), 'admin@tvu.edu.vn', 'Quản trị viên', 'admin');
 INSERT INTO users (username, password, email, fullname, role) VALUES
-('hoangthien', MD5('18052005'), 'hoangthien@tvu.edu.vn', 'Giảng Viên', 'teacher');
+('hoangthien', MD5('18052005'), 'hoangthien@tvu.edu.vn', 'Hoàng Thiên', 'teacher');
+INSERT INTO users (username, password, email, fullname, role) VALUES
+('kimtai', MD5('18052005'), 'kimtai@tvu.edu.vn', 'Kim Tài', 'student');
 
 -- Dữ liệu phòng mẫu
 INSERT INTO phonghop (tenphong, diadiem, succhua, mota) VALUES
-('Phòng họp A', 'Tầng 1 - Nhà A', 20, 'Phòng họp đa năng'),
-('Phòng Lab 1', 'Tầng 2 - Nhà B', 40, 'Phòng thực hành máy tính'),
-('Phòng hội thảo', 'Tầng 3 - Nhà C', 100, 'Phòng hội thảo lớn');
+('C7.201', 'Khu 1', 20, 'Phòng họp đa năng'),
+('C7.202', 'Khu 1', 40, 'Phòng thực hành máy tính'),
+('C7.203', 'khu 1', 100, 'Phòng hội thảo lớn'),
+('C7.204', 'khu 1', 100, 'Phòng hội thảo lớn'),
+('C7.205', 'khu 1', 100, 'Phòng hội thảo lớn');

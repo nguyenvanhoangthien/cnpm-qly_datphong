@@ -602,3 +602,152 @@ nav ul li.dropdown a:hover {
         margin-right: 0;
     }
 }
+
+/* ======== RESPONSIVE MOBILE (max-width: 768px) ======== */
+@media (max-width: 768px) {
+
+    /* Header logo */
+    header .logo {
+        width: 80%;
+    }
+
+    .title {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    /* Nav menu - hamburger style */
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li[style*="float:right"],
+    nav ul li[style*="float: right"] {
+        float: none !important;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 12px;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* Container padding */
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Features grid - 1 cột trên mobile */
+    .features {
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 15px;
+    }
+
+    .section-title {
+        grid-column: 1;
+        font-size: 22px;
+    }
+
+    .feature img {
+        height: 160px;
+    }
+
+    /* Table responsive */
+    .table-responsive-stack thead {
+        display: none;
+    }
+
+    .table td, .table th {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    /* Nút bấm trong bảng */
+    .btn-sm {
+        font-size: 12px;
+        padding: 4px 8px;
+        margin-bottom: 3px;
+        display: inline-block;
+    }
+
+    /* Form */
+    .form-control {
+        font-size: 15px;
+    }
+
+    /* Card login/register */
+    .card {
+        margin: 10px;
+    }
+
+    /* Dashboard stats - 2 cột */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-welcome h2 {
+        font-size: 1.4rem;
+    }
+
+    .dashboard-welcome,
+    .quick-actions,
+    .recent-section {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Header */
+    header {
+        padding: 8px 0;
+    }
+
+    header .logo {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    /* Stats - 1 cột */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Table cuộn ngang */
+    .table-responsive, .container .table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Buttons block */
+    .quick-actions .btn {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    /* Form full width */
+    .col-md-6, .col-md-8 {
+        padding: 0 8px;
+    }
+}

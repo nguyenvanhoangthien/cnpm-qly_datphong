@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Kiểm tra đăng nhập
 if (!isset($_SESSION['username'])) {
@@ -10,7 +12,6 @@ if (!isset($_SESSION['username'])) {
 // Kiểm tra quyền admin
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     header("Location: index.php");
-    exit();
     exit();
 }
 ?>
