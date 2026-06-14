@@ -41,6 +41,11 @@ $is_admin = (isset($_SESSION['role']) && $_SESSION['role'] == 'admin');
     
     <div class="container">
         <h1>Danh sách đăng ký phòng họp</h1>
+        <?php if ($is_admin): ?>
+        <a href="baocao.php" class="btn btn-success mb-3">
+            <i class="fa fa-file-excel"></i> Xuất báo cáo thống kê (CSV)
+        </a>
+        <?php endif; ?>
         
         <?php
         // Hiển thị thông báo thành công
